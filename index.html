@@ -23,13 +23,38 @@
           </div>
         </div>
 
-        <div class="dropdown_menu">
-          <li><a href="hero">home</a></li>
+     <div class="dropdown_menu open">
+      <li><a href="hero">home</a></li>
             <li><a href="about">about</a></li>
             <li><a href="services">services</a></li>
             <li><a href="contact">contact</a></li>
             <li><a href="#" class="action_btn">get started</a></li>
         </div>
     </header>
+
+    <main>
+      <section id="hero">
+        <h1>welcome</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur <br /> adipisicing elit. Doloribus, magni nisi earum maiores molestiae consequatur unde necessitatibus repellendus! Blanditiis minima minus voluptatem, ipsa fugiat voluptatum nisi! Quibusdam accusantium sunt cupiditate?
+        </p>
+      </section>
+    </main>
+
+    <script>
+      const toggleBtn = document.querySelector('.toggle_btn')
+      const toggleBtnicon = document.querySelector('.toggle_btn i')
+      const dropdownmenu = document.querySelector('.dropdown_menu')
+
+      toggleBtn.onclick = function () {
+       dropdownmenu.classlist.toggle('open')
+       const isOpen = dropdownmenu.classlist.contains('open')
+
+        toggleBtnicon.classlist = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa bars'
+
+      }
+    </script>
 </body>
 </html>
